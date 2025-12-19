@@ -25,7 +25,6 @@ public class Account {
         return balance;
     }
 
-    // Mandatory object-parameter method
     public void apply(Transaction tx) {
         if (tx.getFrom() == this) {
             balance -= tx.getAmount();

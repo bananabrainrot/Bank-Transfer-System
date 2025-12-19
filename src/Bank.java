@@ -5,14 +5,12 @@ public class Bank {
 
     private List<Account> accounts = new ArrayList<>();
 
-    // optional extra (implemented)
     public Account openAccount(Customer customer, double initialBalance) {
         Account account = new Account(customer, initialBalance);
         accounts.add(account);
         return account;
     }
 
-    // mandatory method
     public boolean transfer(Account from, Account to, double amount) {
         if (amount <= 0) {
             System.out.println("Transfer amount must be positive.");
